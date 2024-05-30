@@ -1,0 +1,8 @@
+# immortaldb-instance.yaml
+apiVersion: example.com/v1
+kind: ImmortalDB
+metadata:
+  name: immortaldb-sample
+spec:
+  replicas: 3
+  image: "postgres:latest"
