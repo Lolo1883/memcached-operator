@@ -1,0 +1,14 @@
+apiVersion: db.example.com/v1alpha1
+kind: ImmortalDB
+metadata:
+  labels:
+    app.kubernetes.io/name: immortaldb
+    app.kubernetes.io/instance: immortaldb-sample
+    app.kubernetes.io/part-of: memcached-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: memcached-operator
+  name: immortaldb-sampleq
+spec:
+  image: "postgres:latest"
+  replicas: 1
+ 

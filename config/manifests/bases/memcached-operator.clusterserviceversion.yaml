@@ -1,0 +1,51 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: memcached-operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: Memcached is the Schema for the memcacheds API
+      displayName: Memcached
+      kind: Memcached
+      name: memcacheds.cache.example.com
+      version: v1alpha1
+    - description: Memhashed is the Schema for the memhasheds API
+      displayName: Memhashed
+      kind: Memhashed
+      name: memhasheds.cache.example.com
+      version: v1alpha1
+  description: creates deployments and pods
+  displayName: Myfirst-operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - nice
+  - beauty
+  - creative
+  links:
+  - name: Memcached Operator
+    url: https://memcached-operator.domain
+  maturity: alpha
+  provider:
+    name: Mo
+  version: 0.0.0

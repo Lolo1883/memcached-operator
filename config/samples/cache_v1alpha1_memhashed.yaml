@@ -1,0 +1,12 @@
+apiVersion: cache.example.com/v1alpha1
+kind: Memhashed
+metadata:
+  labels:
+    app.kubernetes.io/name: memhashed
+    app.kubernetes.io/instance: memhashed-sample
+    app.kubernetes.io/part-of: memcached-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: memcached-operator
+  name: memhashed-sample
+spec:
+  # TODO(user): Add fields here
