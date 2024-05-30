@@ -1,8 +1,14 @@
-# immortaldb-instance.yaml
-apiVersion: example.com/v1
+apiVersion: db.example.com/v1alpha1
 kind: ImmortalDB
 metadata:
-  name: immortaldb-sample
+  labels:
+    app.kubernetes.io/name: immortaldb
+    app.kubernetes.io/instance: immortaldb-sample
+    app.kubernetes.io/part-of: memcached-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: memcached-operator
+  name: immortaldb-sampleq
 spec:
-  replicas: 3
   image: "postgres:latest"
+  replicas: 1
+ 
